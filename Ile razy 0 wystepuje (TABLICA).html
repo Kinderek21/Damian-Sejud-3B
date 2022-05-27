@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tablicanazw {
+            color: rgb(86, 157, 43);
+            padding-left: 10px;
+        }
+        
+        .tablica {
+            color: #8d0b14;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="tablicanazw">Tablice</h1>
+    <button>Kliknij,</button>
+    <div class="tablica"></div>
+    <div class="a"></div>
+    <script>
+        const btn = document.querySelector('button');
+        const divTablica = document.querySelector('div.tablica');
+        const diva = document.querySelector('div.a');
+        const liczby = [];
+        const aRazy = function(tab, liczba) {
+            let a = 0;
+            tab.forEach((liczbaWTablicy) => {
+                if (liczbaWTablicy == liczba) a++;
+            });
+            return a;
+        }
+        btn.addEventListener('click', function() {
+            for (let i = 0; i <= 50; i++) {
+                liczby[i] = Math.round(Math.random() * 100);
+            }
+            divTablica.textContent = liczby.join(', ');
+            diva.textContent = `Liczba 0 wystepuje : ${aRazy(liczby, 0)} razy`;
+        });
+    </script>
+</body>
+
+</html>

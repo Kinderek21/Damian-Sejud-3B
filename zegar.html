@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        const div = document.querySelector('div');
+        const data = new Date();
+        const rok = data.getFullYear();
+        const miesiac = data.getMonth() + 1;
+        const dzien = data.getDate();
+        div.textContent = `${rok} / ${miesiac} / ${dzien}`;
+        div.textContent = `${rok }` + `/${miesiac }` + `/${dzien }`;
+    </script>
+
+    <!-- Zegar
+    
+    <script>
+        const div = document.querySelector('div');
+         //setTimeOut (nazwafunkcji, czas) 
+        //setInterval (nazwafunkcji czas) 
+
+        function zegarek(){
+        const data = new Date();
+        const godzina = data.getHours();
+        const minuta = data.getMinutes();
+        const sekunda = data.getSeconds();
+        div.textContent = `${godzina }: `+ `${minuta }:` + `${sekunda}`;
+        }
+        zegarek();
+        setInterval(zegarek, 1000);
+        -->
+    </script>
+</body>
+
+</html>
